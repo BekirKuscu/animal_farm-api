@@ -18,7 +18,6 @@ app.post('/retrieveData', async (req, res) => {
     console.log('Email:', email);
     console.log('Session:', session);
     console.log('Date:', date);
-    res.send('Data received.');
     
     const text = 'INSERT INTO AnimalFarmRegistry(Name, Email, Session, Date) VALUES($1, $2, $3, $4) RETURNING *';
     const values = [name, email, session, date];
