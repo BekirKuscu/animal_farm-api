@@ -36,7 +36,7 @@ app.post('/retrieveData', async (req, res) => {
 app.get('/retrieveData', async (req, res) => {
     try {
       const { rows } = await db.query('SELECT * FROM AnimalFarmRegistry');
-      res.status(200).json(rows);
+     res.status(200).json(rows);
     } catch (err) {
       console.error(err.stack);
       res.status(500).send('Error retrieving data from the database.');
